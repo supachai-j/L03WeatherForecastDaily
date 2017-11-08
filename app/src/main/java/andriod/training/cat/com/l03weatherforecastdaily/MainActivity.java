@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView tv_weather_info = (TextView) findViewById(R.id.lo_tv_weather_info);
+
+        //send data between activity and get Extras All Data
         Bundle bundle = getIntent().getExtras();
 
         if(bundle.getString("response")!= null) {
@@ -73,7 +75,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return result;
     }
-
-
 
 }

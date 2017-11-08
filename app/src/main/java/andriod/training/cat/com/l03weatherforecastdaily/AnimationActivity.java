@@ -70,9 +70,12 @@ public class AnimationActivity extends AppCompatActivity {
         new HttpGet().execute();
 
     }
+
     public void gotoMainPage(String response) {
         Intent subIntent = new Intent(getApplicationContext(), MainActivity.class);
+        //put data response to subIntent
         subIntent.putExtra("response", response);
+        //clear intent old
         subIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(subIntent);
         overridePendingTransition(R.anim.trans_left_in, R.anim.trans_left_out);
